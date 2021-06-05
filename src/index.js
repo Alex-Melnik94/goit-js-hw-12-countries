@@ -15,7 +15,7 @@ const countryListEl = document.querySelector('.country-list')
 inputEl.addEventListener('input', debounce(onInput, 500));
 
 function onInput(e) {
-    const countryName = e.target.value
+    const countryName = e.target.value.trim()
     fetchCountries(countryName)
         .then(country => {
             
